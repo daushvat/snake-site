@@ -90,13 +90,14 @@
     }
     .stat-grid {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 10px;
-      width: min(100%, 280px);
+      width: 100%;
+      max-width: 520px;
     }
     .stat {
-      flex: 1 1 calc(50% - 5px);
-      min-width: 120px;
+      flex: 1 1 0;
+      min-width: 0;
       padding: 12px 14px;
       border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.08);
