@@ -211,13 +211,75 @@
       .panel { order: -1; }
     }
     @media (max-width: 680px) {
-      .wrap { padding: 10px; height: 100dvh; }
-      .shell { max-height: calc(100dvh - 20px); gap: 10px; }
-      .stage, .panel { border-radius: 20px; }
-      .mobile-pad { display: grid; }
+      body { height: 100dvh; }
+      .wrap {
+        padding: 8px;
+        height: 100dvh;
+        align-items: stretch;
+      }
+      .shell {
+        width: 100%;
+        height: calc(100dvh - 16px);
+        max-height: calc(100dvh - 16px);
+        gap: 8px;
+        grid-template-rows: auto minmax(0, 1fr);
+      }
+      .stage, .panel {
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .panel {
+        padding: 10px;
+        gap: 8px;
+      }
+      .stage {
+        padding: 10px;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+      }
+      .hud {
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .title {
+        font-size: 1.35rem;
+        margin-bottom: 2px;
+      }
       .sub, .tips, .controls { display: none; }
-      .stat-grid { width: 100%; }
-      canvas { max-height: 54vh; }
+      .stat-grid {
+        width: 100%;
+        gap: 6px;
+      }
+      .stat {
+        padding: 8px 10px;
+        border-radius: 12px;
+      }
+      .stat-label {
+        font-size: 0.62rem;
+        margin-bottom: 3px;
+      }
+      .stat-value {
+        font-size: 1rem;
+      }
+      canvas {
+        width: 100%;
+        height: auto;
+        max-height: calc(100dvh - 250px);
+        aspect-ratio: 1 / 1;
+      }
+      .btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+      }
+      .mobile-pad {
+        display: grid;
+        gap: 8px;
+      }
+      .pad-btn {
+        width: 56px;
+        height: 56px;
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
